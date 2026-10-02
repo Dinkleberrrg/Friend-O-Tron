@@ -1,3 +1,13 @@
+## OctoWoW changes compared to the original
+
+Original: **refaim/Friend-O-Tron**. This fork (by Dinkleberrrg) changes:
+
+- Fixed a Lua error on realms without an existing friends entry.
+
+Details: [CHANGELOG.md](CHANGELOG.md)
+
+---
+
 # Friend-O-Tron
 
 A World of Warcraft addon for Vanilla WoW (1.12.1) and Turtle WoW that automatically synchronizes friends lists across all your characters on the same realm.
