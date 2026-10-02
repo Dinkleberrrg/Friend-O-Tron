@@ -1,10 +1,10 @@
 # Changelog OctoWoW – Friend-O-Tron
 
-> Branch `octowow` = Stand aus Henrys Installation „OctoWoW – HD Upgrade“ (WoW 1.12). Eigene Anpassungen sind im Code mit `-- [patch]` markiert.
+> Branch `octowow` = the state from Henry's "OctoWoW – HD Upgrade" install (WoW 1.12). Own changes are marked with `-- [patch]` in the code.
 
-**Basis:** refaim/Friend-O-Tron `70b9e11` (2025-12-21)
+**Base:** refaim/Friend-O-Tron `70b9e11` (2025-12-21)
 
-## Änderungen
+## Changes
 
-### src/Database.lua – Absturz auf neuem Realm behoben
-Der Eintrag `realmToEvents[GetRealmName()]` wurde nur angelegt, wenn die gesamte SavedVariable fehlte. `LoadFriends()` und `AddEvent()` greifen aber ohne nil-Prüfung darauf zu, was auf jedem Realm ohne bestehenden Eintrag zu einem Lua-Fehler führte. Tabelle und Realm-Eintrag werden jetzt jeweils einzeln angelegt, falls sie fehlen.
+### src/Database.lua – crash on a new realm fixed
+The entry `realmToEvents[GetRealmName()]` was only created when the whole SavedVariable was missing. `LoadFriends()` and `AddEvent()` index it without a nil check, which raised a Lua error on every realm without an existing entry. The table and the realm entry are now each created on their own if missing.
