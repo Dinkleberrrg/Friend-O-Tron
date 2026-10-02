@@ -4,6 +4,14 @@
 
 **Base:** refaim/Friend-O-Tron `70b9e11` (2025-12-21)
 
+
+## Releases
+
+Version scheme: `<upstream version>-octo.<n>`. Each release is a git tag `v<version>`; older versions can be downloaded from the tag page on GitHub.
+
+### 1.2-octo.1 – 2026-10-03
+- First tagged release with the changes listed below.
+
 ## Changes
 
 ### src/Database.lua – crash on a new realm fixed
