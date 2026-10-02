@@ -32,8 +32,17 @@ function Database:_LoadSavedVariable()
     local var = getglobal(varName)
     if var == nil then
         var = {realmToEvents = {}}
-        var.realmToEvents[GetRealmName()] = {}
         setglobal(varName, var)
+    end
+    -- [patch] Der Realmschluessel wurde bisher nur angelegt, wenn die gesamte
+    -- SavedVariable fehlte. LoadFriends() und AddEvent() indizieren
+    -- realmToEvents[GetRealmName()] aber ohne nil-Pruefung -- das kracht auf
+    -- jedem Realm, fuer den noch kein Eintrag existiert.
+    if var.realmToEvents == nil then
+        var.realmToEvents = {}
+    end
+    if var.realmToEvents[GetRealmName()] == nil then
+        var.realmToEvents[GetRealmName()] = {}
     end
     return var
 end
