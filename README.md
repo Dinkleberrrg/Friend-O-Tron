@@ -1,6 +1,6 @@
-## OctoWoW changes compared to the original
+## Notable changes
 
-Original: **refaim/Friend-O-Tron**. This fork (by Dinkleberrrg) changes:
+Fork of **refaim/Friend-O-Tron**.
 
 - Fixed a Lua error on realms without an existing friends entry.
 
